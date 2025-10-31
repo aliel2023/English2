@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Alielenglish - İngilis dili öyrənin A1-dən C2-yə qədər. Gündəlik dərslər, testlər və premium resurslar.">
+    <meta name="keywords" content="ingilis dili, english learning, online courses, Azerbaijan">
+    <title>Alielenglish - Ana Səhifə</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/home.css">
+</head>
+<body>
+    <!-- Header Navigation -->
+    <header class="site-header">
+        <nav class="main-nav">
+            <div class="nav-container">
+                <div class="logo-section">
+                    <div class="logo">
+                        <span class="logo-icon">A</span>
+                    </div>
+                    <span class="brand-name">Alielenglish</span>
+                </div>
+                
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="index.html" class="active">Ana Səhifə</a></li>
+                    <li><a href="daily-word.html">Günün Sözü</a></li>
+                    <li><a href="test.html">Səviyyə Testi</a></li>
+                    <li><a href="resources.html">Resurslar</a></li>
+                    <li><a href="pricing.html">Qiymətlər</a></li>
+                    <li><a href="contact.html">Əlaqə</a></li>
+                </ul>
+
+                <div class="nav-actions">
+                    <div class="lang-switcher">
+                        <a href="index.html" class="lang-btn active">🇦🇿</a>
+                        <a href="en/index.html" class="lang-btn">🇬🇧</a>
+                    </div>
+                    <button class="mobile-toggle" onclick="toggleMobileMenu()">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    İngilis Dilini <span class="gradient-text">Peşəkar</span> Səviyyədə Öyrən
+                </h1>
+                <p class="hero-subtitle">
+                    A1-dən C2-yə qədər strukturlu proqram, gündəlik canlı dərslər və 15,000+ aktiv tələbə ilə öyrənmə səyahətinə başlayın
+                </p>
+                <div class="hero-actions">
+                    <button class="btn btn-primary" onclick="openEmailModal()">
+                        Pulsuz Başla
+                    </button>
+                    <a href="pricing.html" class="btn btn-secondary">
+                        Premium Planlara Bax
+                    </a>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <span class="stat-number" data-target="15000">0</span>
+                        <span class="stat-label">Aktiv Tələbə</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number" data-target="500">0</span>
+                        <span class="stat-label">Dərs Materialu</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number" data-target="98">0</span>
+                        <span class="stat-label">% Məmnuniyyət</span>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="floating-card card-1">
+                    <span class="card-icon">📚</span>
+                    <span class="card-text">50+ PDF Resurslar</span>
+                </div>
+                <div class="floating-card card-2">
+                    <span class="card-icon">🎯</span>
+                    <span class="card-text">İnteraktiv Testlər</span>
+                </div>
+                <div class="floating-card card-3">
+                    <span class="card-icon">🏆</span>
+                    <span class="card-text">Rəsmi Sertifikat</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features-section">
+        <div class="container">
+            <h2 class="section-title">Niyə Alielenglish?</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">📅</div>
+                    <h3>Gündəlik Dərslər</h3>
+                    <p>Hər gün yeni söz, ifadə və qrammatika qaydaları ilə davamlı təlim</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🎓</div>
+                    <h3>Strukturlu Proqram</h3>
+                    <p>A1-dən C2-yə qədər CEFR standartlarına uyğun mərhələli öyrənmə</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">👥</div>
+                    <h3>Canlı Dəstək</h3>
+                    <p>Suallarınıza 24/7 cavab və mentor dəstəyi ilə heç vaxt tək deyilsiniz</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📊</div>
+                    <h3>İrəliləyiş Təqibi</h3>
+                    <p>Öz inkişafınızı izləyin və motivasiya ilə hədəflərinizə çatın</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🎴</div>
+                    <h3>Flashcard Öyrənmə</h3>
+                    <p>İnteraktiv flashcard sistemi ilə sözləri asan yadda saxlayın</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">💼</div>
+                    <h3>İş İngilizcəsi</h3>
+                    <p>Karyera inkişafınız üçün Business English xüsusi modulları</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Daha Gözləməyin - İndi Başlayın!</h2>
+                <p>İlk 100 qeydiyyatçıya <strong>50% endirim</strong> və <strong>pulsuz</strong> bonus material paketimiz</p>
+                <button class="btn btn-light" onclick="openEmailModal()">
+                    Qeydiyyatdan Keç
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>Alielenglish</h4>
+                    <p>2023-dən bəri minlərlə tələbəyə keyfiyyətli ingilis dili təhsili təqdim edirik.</p>
+                    <div class="social-links">
+                        <a href="https://instagram.com/alielenglish" target="_blank" class="social-link">📱</a>
+                        <a href="https://t.me/alielenglish" target="_blank" class="social-link">✈️</a>
+                        <a href="mailto:englishaliel@gmail.com" class="social-link">✉️</a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Keçidlər</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Ana Səhifə</a></li>
+                        <li><a href="daily-word.html">Günün Sözü</a></li>
+                        <li><a href="test.html">Səviyyə Testi</a></li>
+                        <li><a href="resources.html">Resurslar</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Dəstək</h4>
+                    <ul class="footer-links">
+                        <li><a href="pricing.html">Qiymətlər</a></li>
+                        <li><a href="contact.html">Əlaqə</a></li>
+                        <li><a href="#faq">Tez-tez verilən suallar</a></li>
+                        <li><a href="#privacy">Məxfilik</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Xəbər Bülleteni</h4>
+                    <p>Gündəlik dərs və xüsusi təkliflərdən xəbərdar olun</p>
+                    <button class="btn btn-primary btn-sm" onclick="openEmailModal()">Abunə Ol</button>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Alielenglish. Bütün hüquqlar qorunur.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Email Modal -->
+    <div id="emailModal" class="modal">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeEmailModal()">&times;</button>
+            <h2>🎉 Xoş gəlmisiniz!</h2>
+            <p>Pulsuz e-kitab və bonus materiallar əldə etmək üçün qeydiyyatdan keçin</p>
+            <form id="emailForm" class="modal-form">
+                <input type="text" id="userName" placeholder="Adınız" required>
+                <input type="email" id="userEmail" placeholder="Email ünvanınız" required>
+                <button type="submit" class="btn btn-primary">Göndər</button>
+            </form>
+            <p class="privacy-note">🔒 Məlumatlarınız təhlükəsizdir və paylaşılmır</p>
+        </div>
+    </div>
+
+    <script src="scripts/main.js"></script>
+    <script src="scripts/home.js"></script>
+</body>
+</html>

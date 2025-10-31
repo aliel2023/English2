@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Hər gün yeni ingilis sözü, tələffüz və nümunə cümlələr ilə öyrənin">
+    <title>Günün Sözü - Alielenglish</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/daily-word.css">
+</head>
+<body>
+    <header class="site-header">
+        <nav class="main-nav">
+            <div class="nav-container">
+                <div class="logo-section">
+                    <div class="logo"><span class="logo-icon">A</span></div>
+                    <span class="brand-name">Alielenglish</span>
+                </div>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="index.html">Ana Səhifə</a></li>
+                    <li><a href="daily-word.html" class="active">Günün Sözü</a></li>
+                    <li><a href="test.html">Səviyyə Testi</a></li>
+                    <li><a href="resources.html">Resurslar</a></li>
+                    <li><a href="pricing.html">Qiymətlər</a></li>
+                    <li><a href="contact.html">Əlaqə</a></li>
+                </ul>
+                <div class="nav-actions">
+                    <div class="lang-switcher">
+                        <a href="daily-word.html" class="lang-btn active">🇦🇿</a>
+                        <a href="en/daily-word.html" class="lang-btn">🇬🇧</a>
+                    </div>
+                    <button class="mobile-toggle" onclick="toggleMobileMenu()">
+                        <span></span><span></span><span></span>
+                    </button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <section class="daily-hero">
+        <div class="container">
+            <h1 class="section-title">📅 Günün Sözü</h1>
+            <p class="daily-subtitle">
+                Hər gün yeni söz öyrənin və lüğət ehtiyatınızı artırın
+            </p>
+            <div class="daily-date" id="dailyDate"></div>
+        </div>
+    </section>
+
+    <section class="word-of-day">
+        <div class="container">
+            <div class="word-card-main">
+                <div class="word-badge" id="wordLevel">A2 LEVEL</div>
+                
+                <div class="word-main-content">
+                    <h2 class="word-title" id="wordTitle">ACCOMPLISH</h2>
+                    <p class="word-pronunciation" id="wordPronunciation">/əˈkʌmplɪʃ/</p>
+                    <p class="word-type" id="wordType">verb</p>
+                </div>
+
+                <div class="word-translation">
+                    <h3>Tərcümə:</h3>
+                    <p id="wordTranslation">Başarmaq, həyata keçirmək, nail olmaq</p>
+                </div>
+
+                <div class="word-definition">
+                    <h3>Təyinat:</h3>
+                    <p id="wordDefinition">To succeed in doing or completing something, especially something difficult</p>
+                </div>
+
+                <div class="word-examples">
+                    <h3>Nümunə cümlələr:</h3>
+                    <div class="example-item">
+                        <p class="example-en" id="example1En">
+                            "She accomplished her goal of learning English in one year."
+                        </p>
+                        <p class="example-az" id="example1Az">
+                            "O, bir il ərzində ingilis dili öyrənmək məqsədinə çatdı."
+                        </p>
+                    </div>
+                    <div class="example-item">
+                        <p class="example-en" id="example2En">
+                            "The team accomplished a lot during the project."
+                        </p>
+                        <p class="example-az" id="example2Az">
+                            "Komanda layihə zamanı çox şey bacardı."
+                        </p>
+                    </div>
+                </div>
+
+                <div class="word-synonyms">
+                    <h3>Sinonimlər:</h3>
+                    <div class="synonym-tags">
+                        <span class="tag">achieve</span>
+                        <span class="tag">complete</span>
+                        <span class="tag">fulfill</span>
+                        <span class="tag">succeed</span>
+                    </div>
+                </div>
+
+                <div class="word-actions">
+                    <button class="btn btn-primary" onclick="playAudio()">
+                        🔊 Səsləndirmə
+                    </button>
+                    <button class="btn btn-secondary" onclick="addToFavorites()">
+                        ❤️ Sevimlilərə Əlavə Et
+                    </button>
+                    <button class="btn btn-secondary" onclick="shareWord()">
+                        📤 Paylaş
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Statistics -->
+    <section class="word-stats">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-box">
+                    <div class="stat-icon">📚</div>
+                    <div class="stat-number" id="totalWordsLearned">0</div>
+                    <div class="stat-label">Öyrənilmiş Söz</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-icon">🔥</div>
+                    <div class="stat-number" id="currentStreak">0</div>
+                    <div class="stat-label">Günlük Sıra</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-icon">❤️</div>
+                    <div class="stat-number" id="favoriteCount">0</div>
+                    <div class="stat-label">Sevimli Söz</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Word Archive -->
+    <section class="word-archive">
+        <div class="container">
+            <h2 class="section-title">📚 Arxiv</h2>
+            <p class="archive-subtitle">Əvvəlki günlərin sözlərinə baxın</p>
+            
+            <div class="archive-filters">
+                <button class="filter-btn active" onclick="filterArchive('all')">Hamısı</button>
+                <button class="filter-btn" onclick="filterArchive('A1')">A1</button>
+                <button class="filter-btn" onclick="filterArchive('A2')">A2</button>
+                <button class="filter-btn" onclick="filterArchive('B1')">B1</button>
+                <button class="filter-btn" onclick="filterArchive('B2')">B2</button>
+                <button class="filter-btn" onclick="filterArchive('favorites')">❤️ Sevimlilər</button>
+            </div>
+
+            <div class="archive-grid" id="archiveGrid">
+                <!-- Archive cards will be inserted here by JavaScript -->
+            </div>
+
+            <button class="btn btn-secondary" onclick="loadMoreArchive()" id="loadMoreBtn">
+                Daha Çox Yüklə
+            </button>
+        </div>
+    </section>
+
+    <!-- Premium CTA -->
+    <section class="premium-cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2>🚀 Daha Sürətli Öyrənin!</h2>
+                <p>Premium üzvlüklə <strong>günün sözü</strong> ilə yanaşı 500+ əlavə söz, audio və video dərslərlə öyrənin</p>
+                <div class="cta-features">
+                    <div class="cta-feature">✓ Audio tələffüz</div>
+                    <div class="cta-feature">✓ Video izahlar</div>
+                    <div class="cta-feature">✓ Flashcard-lar</div>
+                    <div class="cta-feature">✓ Quiz testləri</div>
+                </div>
+                <button class="btn btn-light" onclick="window.location.href='pricing.html'">
+                    Premium Planlara Bax
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>Alielenglish</h4>
+                    <p>2023-dən bəri minlərlə tələbəyə keyfiyyətli ingilis dili təhsili təqdim edirik.</p>
+                    <div class="social-links">
+                        <a href="https://instagram.com/alielenglish" target="_blank" class="social-link">📱</a>
+                        <a href="https://t.me/alielenglish" target="_blank" class="social-link">✈️</a>
+                        <a href="mailto:englishaliel@gmail.com" class="social-link">✉️</a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Keçidlər</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Ana Səhifə</a></li>
+                        <li><a href="daily-word.html">Günün Sözü</a></li>
+                        <li><a href="test.html">Səviyyə Testi</a></li>
+                        <li><a href="resources.html">Resurslar</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Dəstək</h4>
+                    <ul class="footer-links">
+                        <li><a href="pricing.html">Qiymətlər</a></li>
+                        <li><a href="contact.html">Əlaqə</a></li>
+                        <li><a href="#faq">FAQ</a></li>
+                        <li><a href="#privacy">Məxfilik</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Xəbər Bülleteni</h4>
+                    <p>Gündəlik dərs və xüsusi təkliflərdən xəbərdar olun</p>
+                    <button class="btn btn-primary btn-sm" onclick="openEmailModal()">Abunə Ol</button>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Alielenglish. Bütün hüquqlar qorunur.</p>
+            </div>
+        </div>
+    </footer>
+
+    <div id="emailModal" class="modal">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeEmailModal()">&times;</button>
+            <h2>🎉 Xoş gəlmisiniz!</h2>
+            <p>Pulsuz e-kitab və bonus materiallar əldə etmək üçün qeydiyyatdan keçin</p>
+            <form id="emailForm" class="modal-form">
+                <input type="text" id="userName" placeholder="Adınız" required>
+                <input type="email" id="userEmail" placeholder="Email ünvanınız" required>
+                <button type="submit" class="btn btn-primary">Göndər</button>
+            </form>
+            <p class="privacy-note">🔒 Məlumatlarınız təhlükəsizdir və paylaşılmır</p>
+        </div>
+    </div>
+
+    <script src="scripts/main.js"></script>
+    <script src="scripts/daily-word.js"></script>
+</body>
+</html>

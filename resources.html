@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Pulsuz və Premium ingilis dili öyrənmə resursları - PDF-lər, video dərslər və daha çox">
+    <title>Resurslar - Alielenglish</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/resources.css">
+</head>
+<body>
+    <header class="site-header">
+        <nav class="main-nav">
+            <div class="nav-container">
+                <div class="logo-section">
+                    <div class="logo"><span class="logo-icon">A</span></div>
+                    <span class="brand-name">Alielenglish</span>
+                </div>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="index.html">Ana Səhifə</a></li>
+                    <li><a href="daily-word.html">Günün Sözü</a></li>
+                    <li><a href="test.html">Səviyyə Testi</a></li>
+                    <li><a href="resources.html" class="active">Resurslar</a></li>
+                    <li><a href="pricing.html">Qiymətlər</a></li>
+                    <li><a href="contact.html">Əlaqə</a></li>
+                </ul>
+                <div class="nav-actions">
+                    <div class="lang-switcher">
+                        <a href="resources.html" class="lang-btn active">🇦🇿</a>
+                        <a href="en/resources.html" class="lang-btn">🇬🇧</a>
+                    </div>
+                    <button class="mobile-toggle" onclick="toggleMobileMenu()">
+                        <span></span><span></span><span></span>
+                    </button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <section class="resources-hero">
+        <div class="container">
+            <h1 class="section-title">📚 Öyrənmə Resursları</h1>
+            <p class="resources-subtitle">
+                Pulsuz və premium resurslarımızla öz templinizdə öyrənin. PDF-lər, video dərslər, flashcard-lar və daha çox!
+            </p>
+            
+            <div class="filter-tabs">
+                <button class="filter-tab active" onclick="filterResources('all')">Hamısı</button>
+                <button class="filter-tab" onclick="filterResources('free')">Pulsuz</button>
+                <button class="filter-tab" onclick="filterResources('premium')">Premium</button>
+                <button class="filter-tab" onclick="filterResources('pdf')">PDF</button>
+                <button class="filter-tab" onclick="filterResources('video')">Video</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="resources-content">
+        <div class="container">
+            <div class="resources-grid" id="resourcesGrid">
+                <!-- Free Resources -->
+                <div class="resource-card" data-type="free pdf">
+                    <div class="resource-badge free">PULSUZ</div>
+                    <div class="resource-icon">📚</div>
+                    <h3>50 Daily English Expressions</h3>
+                    <p>Gündəlik istifadə olunan ən populyar 50 ifadə. A1-A2 səviyyəsi üçün ideal başlanğıc.</p>
+                    <div class="resource-meta">
+                        <span>📄 PDF</span>
+                        <span>📏 2.5 MB</span>
+                        <span>⭐ A1-A2</span>
+                    </div>
+                    <div class="resource-stats">
+                        <span class="download-count">1,234 yükləmə</span>
+                    </div>
+                    <button class="btn btn-primary" onclick="downloadResource('50-expressions', 'free')">
+                        Pulsuz Yüklə
+                    </button>
+                </div>
+
+                <div class="resource-card" data-type="free pdf">
+                    <div class="resource-badge free">PULSUZ</div>
+                    <div class="resource-icon">🎯</div>
+                    <h3>Grammar Basics Guide</h3>
+                    <p>Əsas qrammatika qaydaları və izahlar. Başlanğıc səviyyə üçün mükəmməl material.</p>
+                    <div class="resource-meta">
+                        <span>📄 PDF</span>
+                        <span>📏 1.8 MB</span>
+                        <span>⭐ A1</span>
+                    </div>
+                    <div class="resource-stats">
+                        <span class="download-count">892 yükləmə</span>
+                    </div>
+                    <button class="btn btn-primary" onclick="downloadResource('grammar-basics', 'free')">
+                        Pulsuz Yüklə
+                    </button>
+                </div>
+
+                <div class="resource-card" data-type="free pdf">
+                    <div class="resource-badge free">PULSUZ</div>
+                    <div class="resource-icon">🗣️</div>
+                    <h3>Common Phrases for Beginners</h3>
+                    <p>İlk günlərdən istifadə edə biləcəyiniz 30 əsas ifadə və cavabları.</p>
+                    <div class="resource-meta">
+                        <span>📄 PDF</span>
+                        <span>📏 1.2 MB</span>
+                        <span>⭐ A1</span>
+                    </div>
+                    <div class="resource-stats">
+                        <span class="download-count">1,567 yükləmə</span>
+                    </div>
+                    <button class="btn btn-primary" onclick="downloadResource('common-phrases', 'free')">
+                        Pulsuz Yüklə
+                    </button>
+                </div>
+
+                <!-- Premium Resources -->
+                <div class="resource-card featured" data-type="premium pdf">
+                    <div class="resource-badge premium">PREMIUM</div>
+                    <div class="resource-icon">💼</div>
+                    <h3>Business English Complete Pack</h3>
+                    <p>Peşəkar iş mühiti üçün 200+ ifadə, email şablonları və presentation ipucları.</p>
+                    <div class="resource-meta">
+                        <span>📄 PDF</span>
+                        <span>📏 8.5 MB</span>
+                        <span>⭐ B1-B2</span>
+                    </div>
+                    <div class="resource-price">
+                        <span class="price-old">50 AZN</span>
+                        <span class="price-new">25 AZN</span>
+                    </div>
+                    <button class="btn btn-secondary" onclick="showPremiumModal('business-pack')">
+                        Premium Al
+                    </button>
+                </div>
+
+                <div class="resource-card" data-type="premium pdf">
+                    <div class="resource-badge premium">PREMIUM</div>
+                    <div class="resource-icon">✈️</div>
+                    <h3>English for Travel & Tourism</h3>
+                    <p>Səyahət zamanı lazım olan bütün ifadələr, situasiya dialoquları və real nümunələr.</p>
+                    <div class="resource-meta">
+                        <span>📄 PDF</span>
+                        <span>📏 5.2 MB</span>
+                        <span>⭐ A2-B1</span>
+                    </div>
+                    <div class="resource-price">
+                        <span class="price-new">20 AZN</span>
+                    </div>
+                    <button class="btn btn-secondary" onclick="showPremiumModal('travel-pack')">
+                        Premium Al
+                    </button>
+                </div>
+
+                <div class="resource-card" data-type="premium video">
+                    <div class="resource-badge premium">PREMIUM</div>
+                    <div class="resource-icon">🎬</div>
+                    <h3>Video Course: A1 to B1</h3>
+                    <p>50 saatlıq video dərs seriyası, praktik tapşırıqlar və canlı Q&A sessiyaları.</p>
+                    <div class="resource-meta">
+                        <span>🎬 Video</span>
+                        <span>⏱️ 50+ saat</span>
+                        <span>⭐ A1-B1</span>
+                    </div>
+                    <div class="resource-price">
+                        <span class="price-old">199 AZN</span>
+                        <span class="price-new">149 AZN</span>
+                    </div>
+                    <button class="btn btn-secondary" onclick="showPremiumModal('video-course')">
+                        Premium Al
+                    </button>
+                </div>
+
+                <div class="resource-card" data-type="premium pdf">
+                    <div class="resource-badge premium">PREMIUM</div>
+                    <div class="resource-icon">🎓</div>
+                    <h3>Advanced Grammar Mastery</h3>
+                    <p>İnkişaf etmiş qrammatika strukturları, nüanslar və professional writing üçün ipucları.</p>
+                    <div class="resource-meta">
+                        <span>📄 PDF</span>
+                        <span>📏 12 MB</span>
+                        <span>⭐ B2-C1</span>
+                    </div>
+                    <div class="resource-price">
+                        <span class="price-new">35 AZN</span>
+                    </div>
+                    <button class="btn btn-secondary" onclick="showPremiumModal('advanced-grammar')">
+                        Premium Al
+                    </button>
+                </div>
+
+                <div class="resource-card" data-type="premium pdf">
+                    <div class="resource-badge premium">PREMIUM</div>
+                    <div class="resource-icon">🎯</div>
+                    <h3>IELTS Preparation Bundle</h3>
+                    <p>IELTS imtahanına hazırlıq: bütün bölmələr üzrə strategiyalar və 10 full test.</p>
+                    <div class="resource-meta">
+                        <span>📄 PDF</span>
+                        <span>📏 15 MB</span>
+                        <span>⭐ B2-C1</span>
+                    </div>
+                    <div class="resource-price">
+                        <span class="price-new">45 AZN</span>
+                    </div>
+                    <button class="btn btn-secondary" onclick="showPremiumModal('ielts-bundle')">
+                        Premium Al
+                    </button>
+                </div>
+
+                <div class="resource-card" data-type="premium video">
+                    <div class="resource-badge premium">PREMIUM</div>
+                    <div class="resource-icon">💬</div>
+                    <h3>Conversation Practice Sessions</h3>
+                    <p>Native speaker ilə 20+ real-life scenario dialoquları və pronunciation təlimi.</p>
+                    <div class="resource-meta">
+                        <span>🎬 Video</span>
+                        <span>⏱️ 30+ saat</span>
+                        <span>⭐ B1-B2</span>
+                    </div>
+                    <div class="resource-price">
+                        <span class="price-new">89 AZN</span>
+                    </div>
+                    <button class="btn btn-secondary" onclick="showPremiumModal('conversation-pack')">
+                        Premium Al
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="upgrade-cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2>🚀 Daha Sürətli İrəliləyin!</h2>
+                <p>Premium üzvlüklə <strong>bütün resurslara limitsiz giriş</strong> əldə edin</p>
+                <div class="cta-features">
+                    <div class="cta-feature">✓ 100+ Premium PDF</div>
+                    <div class="cta-feature">✓ Video Dərs Kitabxanası</div>
+                    <div class="cta-feature">✓ Canlı Q&A Sessiyaları</div>
+                    <div class="cta-feature">✓ Rəsmi Sertifikat</div>
+                </div>
+                <button class="btn btn-light" onclick="window.location.href='pricing.html'">
+                    Premium Planlara Bax
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>Alielenglish</h4>
+                    <p>2023-dən bəri minlərlə tələbəyə keyfiyyətli ingilis dili təhsili təqdim edirik.</p>
+                    <div class="social-links">
+                        <a href="https://instagram.com/alielenglish" target="_blank" class="social-link">📱</a>
+                        <a href="https://t.me/alielenglish" target="_blank" class="social-link">✈️</a>
+                        <a href="mailto:englishaliel@gmail.com" class="social-link">✉️</a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Keçidlər</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Ana Səhifə</a></li>
+                        <li><a href="daily-word.html">Günün Sözü</a></li>
+                        <li><a href="test.html">Səviyyə Testi</a></li>
+                        <li><a href="resources.html">Resurslar</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Dəstək</h4>
+                    <ul class="footer-links">
+                        <li><a href="pricing.html">Qiymətlər</a></li>
+                        <li><a href="contact.html">Əlaqə</a></li>
+                        <li><a href="#faq">FAQ</a></li>
+                        <li><a href="#privacy">Məxfilik</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Xəbər Bülleteni</h4>
+                    <p>Gündəlik dərs və xüsusi təkliflərdən xəbərdar olun</p>
+                    <button class="btn btn-primary btn-sm" onclick="openEmailModal()">Abunə Ol</button>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Alielenglish. Bütün hüquqlar qorunur.</p>
+            </div>
+        </div>
+    </footer>
+
+    <div id="emailModal" class="modal">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeEmailModal()">&times;</button>
+            <h2>🎉 Xoş gəlmisiniz!</h2>
+            <p>Pulsuz e-kitab və bonus materiallar əldə etmək üçün qeydiyyatdan keçin</p>
+            <form id="emailForm" class="modal-form">
+                <input type="text" id="userName" placeholder="Adınız" required>
+                <input type="email" id="userEmail" placeholder="Email ünvanınız" required>
+                <button type="submit" class="btn btn-primary">Göndər</button>
+            </form>
+            <p class="privacy-note">🔒 Məlumatlarınız təhlükəsizdir və paylaşılmır</p>
+        </div>
+    </div>
+
+    <div id="premiumModal" class="modal">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closePremiumModal()">&times;</button>
+            <h2>🎁 Premium Resursa Xoş Gəlmisiniz!</h2>
+            <p id="premiumModalText">Bu premium resursu əldə etmək üçün ödəniş edin</p>
+            <div class="premium-price" id="premiumPrice"></div>
+            <button class="btn btn-primary" onclick="proceedToCheckout()">Ödənişə Keç</button>
+            <p class="privacy-note">💳 Təhlükəsiz ödəniş - Stripe tərəfindən qorunur</p>
+        </div>
+    </div>
+
+    <script src="scripts/main.js"></script>
+    <script src="scripts/resources.js"></script>
+</body>
+</html>
